@@ -1,0 +1,23 @@
+.cart_modal_footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cart_modal_footer button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close_btn {
+  border: 1px solid #4d1601;
+  background-color: white;
+  color: #4d1601;
+}
+
+.order_btn {
+  border: none;
+  background-color: #4d1601;
+  color: white;
+}
