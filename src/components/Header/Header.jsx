@@ -4,12 +4,12 @@ import Image from "next/image";
 import mealsImage from "../../assets/meals.jpg";
 import HeaderCartButton from "./HeaderCartButton";
 
-const Header = () => {
+const Header = ({ setCartOpen }) => {
   return (
     <>
       <header className={styles.header}>
         <p>React Meals</p>
-        <HeaderCartButton />
+        <HeaderCartButton setCartOpen={setCartOpen} />
       </header>
       <div className={styles.meals_image}>
         <Image src={mealsImage} />
