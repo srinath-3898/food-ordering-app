@@ -1,19 +1,24 @@
 .meal {
-  display: grid;
-  gap: 5px;
+  display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid rgb(215, 215, 215);
   padding: 10px 0px;
 }
 
-.meal p:first-child {
+.meal_details {
+  display: grid;
+  gap: 5px;
+}
+
+.meal_name {
   font-weight: bold;
 }
 
-.meal p:nth-child(2) {
+.meal_description {
   font-style: italic;
 }
 
-.meal p:nth-child(3) {
-  color: brown;
+.meal_price {
+  color: rgb(211, 59, 59);
   font-weight: bold;
 }
