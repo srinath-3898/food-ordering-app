@@ -1,0 +1,14 @@
+.card {
+  background-color: #3f3f3f;
+  width: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  padding: 3rem;
+  border-radius: 5px;
+  color: white;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}

@@ -1,17 +1,1 @@
-.home_page {
-}
 
-.card {
-  background-color: #3f3f3f;
-  width: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  position: absolute;
-  display: grid;
-  place-items: center;
-  gap: 1rem;
-  padding: 3rem;
-  border-radius: 5px;
-  top: 15rem;
-  left: 25rem;
-  color: white;
-}

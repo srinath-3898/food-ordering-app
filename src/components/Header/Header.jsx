@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Header.module.css";
-import { ShoppingCartOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import mealsImage from "../../assets/meals.jpg";
 import HeaderCartButton from "./HeaderCartButton";
