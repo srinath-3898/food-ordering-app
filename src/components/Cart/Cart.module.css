@@ -21,3 +21,9 @@
   background-color: #4d1601;
   color: white;
 }
+
+.empty_cart {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}

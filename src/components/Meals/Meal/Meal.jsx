@@ -1,8 +1,11 @@
-import React from "react";
+"use client";
+import React, { useContext } from "react";
 import styles from "./Meal.module.css";
 import MealForm from "../MealForm/MealForm";
+import { CartContext } from "@/store/cart/CartContext";
 
-const Meal = ({ name, description, price }) => {
+const Meal = ({ id, name, description, price }) => {
+  const { addItem } = useContext(CartContext);
   return (
     <div className={styles.meal}>
       <div className={styles.meal_details}>
@@ -10,7 +13,13 @@ const Meal = ({ name, description, price }) => {
         <p className={styles.meal_description}>{description}</p>
         <p className={styles.meal_price}>{price}</p>
       </div>
-      <MealForm />
+      <MealForm
+        mealId={id}
+        handleSubmit={(event, quantity) => {
+          event.preventDefault();
+          addItem({ id, name, price, quantity });
+        }}
+      />
     </div>
   );
 };
