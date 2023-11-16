@@ -5,7 +5,8 @@ import Modal from "../UI/Modal/Modal";
 import { CartContext } from "@/store/cart/CartContext";
 
 const Cart = () => {
-  const { open, handleCartClose, items, totalAmount } = useContext(CartContext);
+  const { open, handleCartClose, items, addItem, removeItem } =
+    useContext(CartContext);
   return (
     <Modal
       open={open}
@@ -33,9 +34,28 @@ const Cart = () => {
     >
       {items?.length > 0 ? (
         items?.map((item) => (
-          <div key={item?.id}>
-            <p>{item.name}</p>
-            <p>{item.price}</p>
+          <div key={item?.id} className={styles.cart_item}>
+            <div className={styles.item_details}>
+              <p>{item.name}</p>
+              <div className={styles.quantity}>
+                <p>{item.price}</p>
+                <p>x{item.quantity}</p>
+              </div>
+            </div>
+            <div className={styles.container_2}>
+              <button
+                className={styles.plus_btn}
+                onClick={() => addItem({ ...item, quantity: 1 })}
+              >
+                +
+              </button>
+              <button
+                className={styles.minus_btn}
+                onClick={() => removeItem(item.id, item.quantity)}
+              >
+                -
+              </button>
+            </div>
           </div>
         ))
       ) : (

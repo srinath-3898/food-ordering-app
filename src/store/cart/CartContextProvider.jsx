@@ -35,7 +35,20 @@ export const CartContextProvider = ({ children }) => {
     }
   };
 
-  const removeItem = () => {};
+  const removeItem = (id, quantity) => {
+    if (quantity === 1) {
+      setItems((prevState) => prevState.filter((item) => item.id !== id));
+    }
+    setItems((prevState) =>
+      prevState.map((item) => {
+        if (item.id === id) {
+          return { ...item, quantity: quantity - 1 };
+        } else {
+          return item;
+        }
+      })
+    );
+  };
   return (
     <CartContext.Provider
       value={{
